@@ -69,7 +69,9 @@ body, html {
 .main-content {
     margin-left: 220px;
     width: calc(100% - 220px);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
@@ -152,15 +154,16 @@ section {
 /*parcours et alternance*/
 
 .titre-general {
-        text-align: center;
-        font-size: 2em;
-        margin-top: 50px; /* Descend le titre */
-        margin-bottom: 30px;
-        color: #fff;
-        padding-bottom: 10px;
-        border-bottom: 3px solid #8b0000;
-        display: block;
-        width: auto;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #8b0000;
+    display: block;
+    width: auto;
+
 }
 
 .parcours-alternance-wrapper {
