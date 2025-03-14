@@ -5,138 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio BTS SIO SISR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            overflow-y: auto;
-            scroll-behavior: smooth;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #141E30, #243B55);
-            color: white;
-        }
-
-        .sidebar {
-            width: 220px;
-            background: linear-gradient(135deg, #1e1e1e, #323232);
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 20px;
-            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .sidebar h2 {
-            color: white;
-            margin-bottom: 30px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            width: 100%;
-        }
-
-        .sidebar ul li {
-            width: 100%;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
-
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            width: 100%;
-            padding: 10px;
-        }
-
-        .sidebar ul li a:hover, .sidebar ul .active a {
-            color: #4078c0;
-        }
-
-        .separator {
-            width: 80%;
-            height: 2px;
-            background-color: rgba(255, 255, 255, 0.3);
-            margin: 15px auto;
-        }
-
-        .main-content {
-            margin-left: 220px;
-            width: calc(100% - 220px);
-            overflow: hidden;
-        }
-
-        section {
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 50px;
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .card {
-            background: linear-gradient(135deg, #232526, #414345);
-            padding: 15px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            cursor: pointer;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.5);
-        }
-
-        .card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="Porfolio BTS SIO SISR loic chan huot.css">
 </head>
+
 <body>
     <div class="sidebar">
         <h2>Loïc CHAN HUOT</h2>
         <div class="separator"></div>
         <ul>
-            <li><a href="#accueil"><i class="fa-solid fa-house"></i> Accueil</a></li>
-            <li><a href="#profil"><i class="fa-solid fa-user"></i> Profil</a></li>
-            <li><a href="#services"><i class="fa-solid fa-list"></i> Services</a></li>
-            <li><a href="#portfolio"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
-            <li><a href="#blog"><i class="fa-solid fa-book-open"></i> Blog</a></li>
-            <li><a href="#contact"><i class="fa-solid fa-comments"></i> Contact</a></li>
+            <ul>
+                <li><a href="#accueil"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li><a href="#profil"><i class="fa-solid fa-user"></i> Profil</a></li>
+                <li><a href="#parcours-alternance"><i class="fa-solid fa-graduation-cap"></i> Parcours</a></li>
+                <li><a href="#parcours-alternance"><i class="fa-solid fa-briefcase"></i> Alternance</a></li>
+                <li><a href="#competences"><i class="fa-solid fa-desktop"></i> Compétences</a></li>
+                <li><a href="#projets"><i class="fa-solid fa-code"></i> Projets</a></li>
+                <li><a href="#btssio"><i class="fa-solid fa-building"></i> BTS SIO</a></li>
+                <li><a href="#epreuves"><i class="fa-solid fa-book"></i> Épreuves</a></li>
+                <li><a href="#blog"><i class="fa-solid fa-book-open"></i> Blog</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
         </ul>
     </div>
 
@@ -154,41 +42,88 @@
                 <p>Passionné d'informatique, spécialisé en réseaux & cybersécurité. Expérience en administration système.</p>
             </div>
         </section>
-        
+
+        <section id="parcours-alternance">
+            <div class="section-content">
+                <h2>Parcours & Alternance 🎓</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-item-content">
+                            <h4>BTS SIO</h4>
+                            <p><strong>2022 - À ce jour</strong></p>
+                            <p>BTS SIO - OPTION SISR</p>
+                            <p>École ORT DANIEL MAYER (93 - Montreuil)</p>
+                        </div>
+                    </div>
+                
+                    <div class="timeline-item">
+                        <div class="timeline-item-content">
+                            <h4>LYCÉE GÉNÉRAL</h4>
+                            <p><strong>2019 - 2022</strong></p>
+                            <p>BAC GÉNÉRAL ES - OPTION MATHS/ECO</p>
+                            <p>Mention Assez Bien</p>
+                            <p>Lycée Alliance (93 - Pavillons-sous-Bois)</p>
+                        </div>
+                    </div>
+                
+                    <div class="timeline-item">
+                        <div class="timeline-item-content">
+                            <h4>COLLÈGE</h4>
+                            <p><strong>2016 - 2019</strong></p>
+                            <p>Collège de Lattre (94 - Le Perreux-sur-Marne)</p>
+                        </div>
+                    </div>
+                
+                    <div class="timeline-item">
+                        <div class="timeline-item-content">
+                            <h4>ALTERNANCE FOLIATEAM</h4>
+                            <p><strong>2023 (6 mois) & 2024 (6 mois)</strong></p>
+                            <p>Alternance BTS SIO suivie dans l'entreprise FOLIATEAM</p>
+                            <p>📍 <a href="https://www.foliateam.com" target="_blank">www.foliateam.com</a></p>
+                            <p>🏢 FOLIATEAM - Siège</p>
+                            <p>🏢 FOLIATEAM - Paris Datacenter</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+                
         <section id="services">
             <div class="section-content">
                 <h2>Mes Services</h2>
                 <p>Déploiement d’infrastructures, gestion de serveurs, virtualisation, et sécurité réseau.</p>
             </div>
         </section>
-        
-        <section id="portfolio">
+
+        <section id="projets">
             <h2>Mes Projets</h2>
             <p>Voici quelques-uns de mes projets en BTS SIO SISR :</p>
             <div class="grid">
-                <div class="card"><img src="projet1.png" alt="Projet 1"></div>
-                <div class="card"><img src="projet2.png" alt="Projet 2"></div>
-                <div class="card"><img src="projet3.png" alt="Projet 3"></div>
-                <div class="card"><img src="projet4.png" alt="Projet 4"></div>
-                <div class="card"><img src="projet5.png" alt="Projet 5"></div>
-                <div class="card"><img src="projet6.png" alt="Projet 6"></div>
+                <div class="card">Projet 1</div>
+                <div class="card">Projet 2</div>
+                <div class="card">Projet 3</div>
+                <div class="card">Projet 4</div>
+                <div class="card">Projet 5</div>
+                <div class="card">Projet 6</div>
             </div>
         </section>
-        
+
         <section id="blog">
             <div class="section-content">
                 <h2>Blog</h2>
                 <p>Retrouvez mes articles sur la cybersécurité, l'administration réseau et les tendances IT.</p>
             </div>
         </section>
-        
+
         <section id="contact">
-            <div class="section-content">
-                <h2>Contact</h2>
-                <p>Envoyez-moi un message pour discuter d'un projet ou d'une collaboration.</p>
+            <h2>Contact</h2>
+            <p>N'hésitez pas à me contacter pour toutes questions ou renseignements complémentaires via ce formulaire.</p>
+            <div class="form-container">
+                <input type="text" placeholder="Votre Nom">
+                <input type="email" placeholder="Votre adresse email">
+                <textarea placeholder="Votre message" rows="6"></textarea>
+                <button type="submit">Envoyer</button>
             </div>
         </section>
-        
     </div>
 </body>
 </html>
