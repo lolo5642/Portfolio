@@ -1,17 +1,54 @@
+/* Animation pour la page d'accueil */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles pour la page d'accueil */
+body.homepage {
+    animation: gradientAnimation 10s ease infinite;
+    background: linear-gradient(270deg, #141E30, #243B55, #141E30);
+    background-size: 400% 400%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Styles pour les autres pages */
+body {
+    background: linear-gradient(135deg, #141E30, #243B55);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #141E30, #243B55);
-    color: white;
 }
 
 .sidebar {
     width: 220px;
-    background: linear-gradient(135deg, #1e1e1e, #323232);
+    background: rgba(0, 0, 0, 0.8);
     height: 100vh;
     position: fixed;
     left: 0;
@@ -22,6 +59,11 @@ body, html {
     justify-content: center;
     padding: 20px;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+    transition: width 0.3s;
+}
+
+.sidebar:hover {
+    width: 250px;
 }
 
 .sidebar h2 {
@@ -29,6 +71,7 @@ body, html {
     margin-bottom: 30px;
     text-align: center;
     width: 100%;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .sidebar ul {
@@ -53,10 +96,13 @@ body, html {
     gap: 12px;
     width: 100%;
     padding: 10px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
 .sidebar ul li a:hover, .sidebar ul .active a {
+    background: rgba(255, 255, 255, 0.1);
     color: #4078c0;
+    transform: translateX(10px);
 }
 
 .separator {
@@ -72,6 +118,11 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: margin-left 0.3s;
+}
+
+.sidebar:hover ~ .main-content {
+    margin-left: 250px;
 }
 
 section {
@@ -87,8 +138,39 @@ section {
     scroll-margin-top: 100px;
 }
 
+.overlay-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.overlay-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.overlay-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.btn-cta {
+    padding: 15px 30px;
+    background: #4078c0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-cta:hover {
+    background: #141E30;
+    transform: translateY(-5px);
+}
+
 .form-container {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     color: #333;
     padding: 30px;
     border-radius: 8px;
@@ -124,7 +206,7 @@ section {
     background: #4078c0;
 }
 
-/*partie projets*/
+/* Partie projets */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -135,7 +217,7 @@ section {
 }
 
 .card {
-    background: linear-gradient(135deg, #232526, #414345);
+    background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     border-radius: 12px;
     text-align: center;
@@ -151,8 +233,7 @@ section {
     box-shadow: 0 10px 25px rgba(0, 212, 255, 0.5);
 }
 
-/*parcours et alternance*/
-
+/* Parcours et alternance */
 .titre-general {
     text-align: center;
     font-size: 2em;
@@ -163,7 +244,6 @@ section {
     border-bottom: 3px solid #8b0000;
     display: block;
     width: auto;
-
 }
 
 .parcours-alternance-wrapper {
@@ -191,10 +271,11 @@ section {
 
 .parcours, .alternance {
     width: 48%;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
     padding: 10px;
     box-sizing: border-box;
+    border-radius: 8px;
 }
 
 .parcours {
@@ -296,7 +377,7 @@ section {
 }
 
 .timeline-item-content {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     padding: 10px 15px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
