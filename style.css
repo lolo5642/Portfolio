@@ -60,6 +60,7 @@ body, html {
     padding: 20px;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
     transition: width 0.3s;
+    z-index: 1000; /* Assurez-vous que la barre latérale est au-dessus du contenu */
 }
 
 .sidebar:hover {
@@ -113,16 +114,23 @@ body, html {
 }
 
 .main-content {
-    margin-left: 220px;
-    width: calc(100% - 220px);
+    margin-left: 250px; /* Default margin for when sidebar is hovered */
+    width: calc(100vw - 250px);
+    max-width: calc(100vw - 250px);
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: margin-left 0.3s;
+    padding: 20px; /* Ajoutez un padding pour éviter le chevauchement */
+    box-sizing: border-box;
 }
 
-.sidebar:hover ~ .main-content {
-    margin-left: 250px;
+/* Adjust main content margin when sidebar is not hovered */
+.main-content:not(.sidebar:hover ~ .main-content) {
+    margin-left: 220px;
+    width: calc(100vw - 220px);
+    max-width: calc(100vw - 220px);
 }
 
 section {
@@ -136,6 +144,7 @@ section {
     text-align: center;
     box-sizing: border-box;
     scroll-margin-top: 100px;
+    max-width: 100%; /* Assurez-vous que la section ne dépasse pas le contenu principal */
 }
 
 .overlay-content {
@@ -251,7 +260,8 @@ section {
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
-    width: 90%;
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
     box-sizing: border-box;
     margin-top: 20px;
@@ -267,19 +277,18 @@ section {
     padding: 20px;
     min-height: 100vh;
     padding-top: 100px;
+    box-sizing: border-box;
 }
 
 .parcours, .alternance {
-    width: 48%;
+    width: 47%;
+    max-width: 550px;
     background: #141E30, #243B55, #141E30;
     color: #fff;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 8px;
-}
-
-.parcours {
-    margin-right: 20px;
+    margin-right: 10px; /* Ajustez la marge pour éviter le chevauchement */
 }
 
 .parcours h3, .alternance h3 {
