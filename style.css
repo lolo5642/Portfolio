@@ -422,3 +422,53 @@ section {
 .timeline-item-content a:hover {
     text-decoration: underline;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar:hover {
+        width: 230px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .sidebar:hover ~ .main-content {
+        margin-left: 230px;
+    }
+
+    .parcours-alternance-wrapper {
+        flex-direction: column;
+    }
+
+    .parcours, .alternance {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .sidebar:hover {
+        width: 210px;
+    }
+
+    .main-content {
+        margin-left: 180px;
+    }
+
+    .sidebar:hover ~ .main-content {
+        margin-left: 210px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
