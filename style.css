@@ -60,7 +60,7 @@ body, html {
     padding: 20px;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
     transition: width 0.3s;
-    z-index: 1000; /* Assurez-vous que la barre latérale est au-dessus du contenu */
+    z-index: 1000;
 }
 
 .sidebar:hover {
@@ -114,7 +114,7 @@ body, html {
 }
 
 .main-content {
-    margin-left: 250px; /* Default margin for when sidebar is hovered */
+    margin-left: 250px;
     width: calc(100vw - 250px);
     max-width: calc(100vw - 250px);
     overflow-x: hidden;
@@ -122,11 +122,10 @@ body, html {
     flex-direction: column;
     align-items: center;
     transition: margin-left 0.3s;
-    padding: 20px; /* Ajoutez un padding pour éviter le chevauchement */
+    padding: 20px;
     box-sizing: border-box;
 }
 
-/* Adjust main content margin when sidebar is not hovered */
 .main-content:not(.sidebar:hover ~ .main-content) {
     margin-left: 220px;
     width: calc(100vw - 220px);
@@ -144,7 +143,7 @@ section {
     text-align: center;
     box-sizing: border-box;
     scroll-margin-top: 100px;
-    max-width: 100%; /* Assurez-vous que la section ne dépasse pas le contenu principal */
+    max-width: 100%;
 }
 
 .overlay-content {
@@ -288,7 +287,7 @@ section {
     padding: 10px;
     box-sizing: border-box;
     border-radius: 8px;
-    margin-right: 10px; /* Ajustez la marge pour éviter le chevauchement */
+    margin-right: 10px;
 }
 
 .parcours h3, .alternance h3 {
@@ -361,6 +360,8 @@ section {
     padding-left: 15px;
     position: relative;
     margin-bottom: 20px;
+    left: 0 !important;
+    text-align: left !important;
 }
 
 .timeline-item::before {
@@ -373,16 +374,6 @@ section {
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-    text-align: left;
 }
 
 .timeline-item-content {
@@ -421,87 +412,4 @@ section {
 
 .timeline-item-content a:hover {
     text-decoration: underline;
-}
-
-/* Media Queries */
-@media (max-width: 1980px) {
-    .main-content {
-        margin-left: 250px;
-        width: calc(100vw - 250px);
-    }
-
-    .sidebar:hover ~ .main-content {
-        margin-left: 250px;
-    }
-}
-
-@media (max-width: 1440px) {
-    .main-content {
-        margin-left: 220px;
-        width: calc(100vw - 220px);
-    }
-
-    .sidebar:hover ~ .main-content {
-        margin-left: 250px;
-    }
-}
-
-@media (max-width: 1080px) {
-    .main-content {
-        margin-left: 200px;
-        width: calc(100vw - 200px);
-    }
-
-    .sidebar:hover ~ .main-content {
-        margin-left: 230px;
-    }
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-    }
-
-    .sidebar:hover {
-        width: 230px;
-    }
-
-    .main-content {
-        margin-left: 200px;
-    }
-
-    .sidebar:hover ~ .main-content {
-        margin-left: 230px;
-    }
-
-    .parcours-alternance-wrapper {
-        flex-direction: column;
-    }
-
-    .parcours, .alternance {
-        width: 100%;
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        width: 180px;
-    }
-
-    .sidebar:hover {
-        width: 210px;
-    }
-
-    .main-content {
-        margin-left: 180px;
-    }
-
-    .sidebar:hover ~ .main-content {
-        margin-left: 210px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
 }
