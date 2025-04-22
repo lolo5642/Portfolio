@@ -665,3 +665,55 @@ section {
   margin-bottom: 30px;
   font-size: 1em;
 }
+
+.submenu-details {
+    list-style: none;
+    padding-left: 0;
+    color: white;
+  }
+  
+  .submenu-details summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .submenu-details summary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #4078c0;
+  }
+  
+  .submenu-details[open] summary {
+    font-weight: bold;
+  }
+  
+  .sub-menu {
+    margin: 0;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 5px;
+  }
+  
+  .sub-menu li {
+    list-style: none;
+  }
+  
+  .sub-menu a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s;
+  }
+  
+  .sub-menu a:hover {
+    color: #4078c0;
+  }
+  
