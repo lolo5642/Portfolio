@@ -741,3 +741,52 @@ section {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(0, 212, 255, 0.7);
 }
+
+.card h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card a.btn-epreuve {
+    margin-top: 10px;
+    display: inline-block;
+    background: linear-gradient(90deg, #00c9ff, #0044ff);
+    color: white;
+    font-weight: bold;
+    font-size: 0.95em;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card a.btn-epreuve:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+}
+
+.presentation-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+    max-width: 900px;
+    animation: fadeInUp 1.2s ease forwards;
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #e0e0e0;
+  }
+  
+  .presentation-box strong {
+    color: #00c9ff;
+  }
+  
+  .presentation-box em {
+    font-style: italic;
+    color: #aee7ff;
+  }
+  
+  

@@ -8,25 +8,67 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="homepage">
+
+  <div class="sidebar-wrapper">
+    <div class="sidebar">
+      <h2>Loïc CHAN HUOT</h2>
+      <div class="separator"></div>
+      <ul>
+        <li><a href="#fiche1"><i class="fa-solid fa-network-wired"></i> Réalisation 1</a></li>
+        <li><a href="#fiche2"><i class="fa-solid fa-shield-alt"></i> Réalisation 2</a></li>
+        <li><a href="index.html#epreuves"><i class="fa-solid fa-arrow-left"></i> Retour</a></li>
+      </ul>      
+    </div>
+  </div>
+
   <div class="main-content">
-    <section class="section-content">
-      <h1 class="titre-general">Épreuve E6 – Administration des Systèmes et Réseaux</h1>
 
-      <p>
-        Cette épreuve a pour but de valider mes compétences techniques en <strong>déploiement, supervision</strong> et <strong>administration d'infrastructures systèmes et réseaux</strong>.
-      </p>
+    <section id="fiche1" class="section-content">
+      <h1 class="titre-general">Présentation Fiche 1</h1>
+      <div class="presentation-box">
+        <h3>Installation et configuration d’un serveur GLPI avec liaison LDAP (Active Directory), DHCP et DNS</h3>
 
-      <ul style="text-align: left; max-width: 800px; margin: auto; line-height: 1.8;">
-        <li><strong>Contenu :</strong> Présentation de deux projets réalisés, l’un étant choisi pour un oral technique.</li>
-        <li><strong>Phases :</strong> Préparation, manipulation sur machine, entretien technique.</li>
-        <li><strong>Compétences évaluées :</strong> Mise en place de services, sécurité, qualité, supervision, documentation technique.</li>
-        <li><strong>Durée :</strong> 20 min de préparation + 40 min d'entretien avec le jury.</li>
-      </ul>
+        <p>Déployer une infrastructure réseau complète incluant un serveur GLPI sous Linux et un serveur Windows avec les rôles Active Directory, DHCP et DNS. GLPI permet une gestion centralisée de parc informatique avec authentification unifiée via LDAP.</p>
+    
+        <p><strong>Environnement :</strong> Virtualisation <strong>Hyper-V</strong> – projet réalisé en équipe</p>
+    
+        <p><strong>Machines utilisées :</strong><br>
+          1 VM <strong>Ubuntu Server 22.04</strong> (serveur GLPI)<br>
+          1 VM <strong>Windows Server 2019</strong> (AD, DHCP, DNS, RRAS)<br>
+          Postes clients Windows 10 avec <em>GLPI Agent Inventory</em>
+        </p>
+    
+        <p><strong>Compétences visées :</strong><br>
+          Déploiement de solutions d'infrastructure réseau<br>
+          Authentification via annuaire LDAP (Active Directory)<br>
+          Attribution dynamique IP via DHCP, résolution DNS<br>
+          Automatisation de l’inventaire via GLPI Agent
+        </p>
+        <a href="E6/fiche 1.pdf" class="btn-epreuve" target="_blank">📄 Voir la fiche de réalisations</a>
+        <a href="Mes projets/Configuration du server linux pour GLPI.pdf" target="_blank" class="btn-epreuve">📝 Procédure</a>
+      </div>
+    </section>
 
-      <div class="cv-button-container">
-        <a href="index.html#epreuves" class="btn-cv">⬅️ Retour au Portfolio</a>
+    <section id="fiche2" class="section-content">
+      <h1 class="titre-general">Présentation Fiche 2</h1>
+      <div class="presentation-box">
+        <h3> Mettre en œuvre une solution VPN site-à-site sécurisée avec <strong>WireGuard</strong>, permettant uniquement aux utilisateurs authentifiés d’accéder au serveur <strong>Active Directory</strong> via un tunnel sécurisé. Tous les accès directs LAN sont bloqués pour garantir l’isolation du réseau.</h3>
+        <p><strong>Environnement :</strong> Virtualisation avec <strong>Hyper-V</strong></p>
+
+        <p><strong>Machines utilisées :</strong><br>
+          1 VM <strong>Debian</strong> (serveur VPN)<br>
+          1 VM <strong>Windows Server 2019</strong> (contrôleur AD)<br>
+          1 poste client <strong>Windows 10</strong>
+        </p>
+    
+        <p><strong>Compétences visées :</strong><br>
+          Configuration de services réseau sous Linux et Windows<br>
+          Administration sécurisée de domaine Active Directory<br>
+          Mise en place de VPN moderne (WireGuard)<br>
+          Sécurisation via GPO et pare-feux (ufw, iptables, Windows Defender)
+        </p>
+        <a href="E6/fiche 2.pdf" class="btn-epreuve" target="_blank">📄 Voir la fiche de réalisations</a>
+        <a href="Mes projets/Installation et configuration Wireguard Debian.pdf" target="_blank" class="btn-epreuve">📝 Procédure</a>
       </div>
     </section>
   </div>
-</body>
-</html>
