@@ -719,23 +719,20 @@ section {
   
   .epreuve-buttons {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: center;
   margin-top: 30px;
-  flex-wrap: wrap;
+  padding: 10px 0;
+  max-width: 100%;
 }
 
 .btn-epreuve {
-  background: linear-gradient(90deg, #00c9ff, #0044ff);
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
-  transition: all 0.3s ease-in-out;
+  flex: 1 1 280px;
+  max-width: 320px;
+  text-align: center;
 }
+
 
 .btn-epreuve:hover {
   transform: scale(1.05);
